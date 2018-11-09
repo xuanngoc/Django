@@ -1,0 +1,54 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Todo</title>
+        <link rel="shortcut icon" href="https://bom.to/Oi3so" />
+        <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    </head>
+    <body>
+        <div id="container">
+            <div id="header">
+                <h1>Todo list</h1>
+            </div>
+            <div id="main">
+                <ul>
+                    {% for todo_item in all_items %}
+                    <li>
+                        <form action="/deleteTodo/{{todo_item.id}}" style="display:inline;" method = "post">{% csrf_token %}
+                            <input type="submit" value="Done">
+                        </form>
+                        {{todo_item.content}}
+                    </li> 
+                    {% endfor %}  
+                </ul>
+                    <form action="/addTodo/" method = "post">{% csrf_token %}
+                        <input type="text" name="content" placeholder="You must do this">
+                        <input type="submit" value="Add">
+                    </form> 
+            </div>
+            <div id="footer">
+                <h4>Copyright &copy; 2018</h4>
+            </div>
+
+        </div>
+    </body>
+</html>
+
+<!-- <center><h1>Todo list</h1></center> 
+
+        <ul>
+            {% for todo_item in all_items %}
+            <li>{{todo_item.content}}
+                <form action="/deleteTodo/{{todo_item.id}}" style="display:inline;" method = "post">{% csrf_token %}
+                    <input type="submit" value="Done">
+                </form>
+            </li> 
+            {% endfor %}  
+        </ul>
+
+        <form action="/addTodo/" method = "post">{% csrf_token %}
+            <input type="text" name="content">
+            <input type="submit" value="Add">
+        </form> -->

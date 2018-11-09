@@ -1,0 +1,47 @@
+body{
+    background-color: gray;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+}
+#header{
+    background-color: rgb(159, 218, 226);
+    text-align: center;
+    padding: 0px;
+    color: rgb(54, 90, 189);
+    font-style: italic; 
+    font-family: monospace;
+    font-size: 18px;
+}
+#main{
+    background-color: mediumspringgreen;
+    padding: 10px;
+    text-align: left;
+    width: 600px;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+}
+#main ul{
+    list-style-type: none; 
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 18px;
+    font-style: italic; 
+
+}
+#main input[type=text]{
+    background-color: lavender;
+    border-radius: 5px;
+    margin-left: 40px;;
+    width: 300px;
+}
+#main input[type=submit]{
+    border-radius: 2px;
+    border-color: red;
+}
+#footer{
+    text-align: right;
+    padding-top: 500px;
+    //background-color: black;
+    color: white;
+    
+}
